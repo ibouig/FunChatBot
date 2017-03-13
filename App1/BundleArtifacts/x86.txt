@@ -1,0 +1,2 @@
+MainPackage=C:\Users\ibouig\Desktop\FunChatBot\App1\bin\x86\Release\FunChatBot_1.1.1.0_x86.appx
+SymbolPackage=C:\Users\ibouig\Desktop\FunChatBot\App1\AppPackages\FunChatBot_1.1.1.0_Test\FunChatBot_1.1.1.0_x86.appxsym

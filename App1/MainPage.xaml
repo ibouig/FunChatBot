@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Background="Beige" >
+            
+                <Grid.RowDefinitions>
+                <RowDefinition Height="120*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+           
+            <ToggleSwitch Grid.RowSpan="1" VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="toggleSwitch" Header="Sound" Margin="0,7,-35,0" Toggled="toggleSwitch_Toggled" Height="57" Width="108"/>
+            <MediaElement x:Name="uiMediaElement"></MediaElement>
+
+            <Image Grid.RowSpan="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" Source="/Assets/Square150x150Logo.scale-200.png" x:Name="image"  Height="234" Margin="30,62,20,0"/>
+            <Border Grid.Row="1" BorderThickness="0" BorderBrush="White" Background="White" CornerRadius="10" Margin="20,0,20,-0.333" >
+                <TextBox FontSize="17%" BorderThickness="0"  Margin="5,0,5,0" InputScope="Text" TextAlignment="Center"  TextWrapping="Wrap" TextChanged="OutputBox_TextChanged" Text="Come on Let's Have Fun , Chat with me !"   Name="OutputBox" IsReadOnly="True"  Grid.Row="1" Grid.RowSpan="2"  />
+            </Border>
+            <StackPanel Grid.Row="3" >
+                <Border BorderThickness="0" BorderBrush="White" Background="White" CornerRadius="10" Margin="20,0,20,0">
+                    <TextBox BorderThickness="0" KeyDown="InputBox_KeyDown"  GotFocus="InputBox_GotFocus" Height="36"  Name="InputBox" TextWrapping="Wrap" Margin="5,0,5,0" />
+                </Border>
+                <Button BorderThickness="0" Margin="10" FontSize="20" Background="#3FBBA1" Content="Send" Name="SendButton" Click="SendButton_OnClick" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                </Button>
+
+
+            </StackPanel>
+            
+            <Button Grid.Row="4" HorizontalAlignment="Right" Click="Button_Click">
+                <SymbolIcon x:Name="play" Symbol="ShowBcc"/>
+            </Button>
+
+        </Grid>
+        </ScrollViewer>
+        <!--
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <StackPanel x:Name="contentPanel" Margin="8,32,0,0">
+                <TextBlock Text="Hello, world!" Margin="0,0,0,40"/>
+                <TextBlock Text="What' s your name?"/>
+                <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
+                    <TextBox x:Name="nameInput" Width="280" HorizontalAlignment="Left"/>
+                    <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="inputButton_Click"/>
+                </StackPanel>
+                <TextBlock x:Name="greetingOutput"/>
+            </StackPanel>
+        </Grid>
+        -->
+    </Grid>
+</Page>
